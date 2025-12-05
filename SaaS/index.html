@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux.org - 开源操作系统的家园</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23000'/><text y='55' font-size='50' text-anchor='middle' fill='white'>🐧</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo">🐧</span>
+                <span class="nav-title">Linux.org</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">首页</a>
+                <a href="#download" class="nav-link">下载</a>
+                <a href="#documentation" class="nav-link">文档</a>
+                <a href="#community" class="nav-link">社区</a>
+                <a href="#news" class="nav-link">新闻</a>
+                <a href="#support" class="nav-link">支持</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Linux<br>
+                        <span class="hero-gradient">开源操作系统</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        强大、稳定、安全的选择。数百万开发者和企业的首选操作系统，驱动着从智能手机到超级计算机的一切。
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn btn-primary">
+                            <span>立即下载</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v15m0 0l-5-5m5 5l5-5"/>
+                                <path d="M2 17v2a2 2 0 002 2h16a2 2 0 002-2v-2"/>
+                            </svg>
+                        </a>
+                        <a href="#documentation" class="btn btn-outline">了解更多</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="terminal-btn terminal-btn-close"></span>
+                                <span class="terminal-btn terminal-btn-minimize"></span>
+                                <span class="terminal-btn terminal-btn-maximize"></span>
+                            </div>
+                            <div class="terminal-title">terminal@linux</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-cursor">|</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">核心特性</span>
+                </div>
+                <h2 class="section-title">为什么选择 Linux？</h2>
+                <p class="section-subtitle">开源理念与现代技术的完美结合</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">安全可靠</h3>
+                    <p class="feature-description">企业级安全特性，多层权限控制，经过严格的安全审计，保护您的数据和系统。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">极致性能</h3>
+                    <p class="feature-description">高效的资源管理，优化的内核设计，提供卓越的系统性能和响应速度。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">开放社区</h3>
+                    <p class="feature-description">全球最大的开源社区之一，活跃的开发者生态，持续的创新和改进。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18"/>
+                            <path d="M9 21V9"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">高度定制</h3>
+                    <p class="feature-description">灵活的配置选项，丰富的桌面环境选择，完全按需定制您的系统。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distributions Section -->
+    <section id="download" class="distributions">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">发行版</span>
+                </div>
+                <h2 class="section-title">选择适合您的发行版</h2>
+                <p class="section-subtitle">丰富的Linux发行版生态系统</p>
+            </div>
+
+            <div class="distros-grid">
+                <div class="distro-card featured">
+                    <div class="distro-header">
+                        <h3 class="distro-name">Ubuntu</h3>
+                        <span class="distro-tag">推荐</span>
+                    </div>
+                    <div class="distro-body">
+                        <p class="distro-description">用户友好的发行版，适合新手和日常使用</p>
+                        <ul class="distro-features">
+                            <li>简单易用的图形界面</li>
+                            <li>庞大的软件仓库</li>
+                            <li>长期支持版本</li>
+                        </ul>
+                        <button class="btn btn-primary distro-btn">下载 Ubuntu</button>
+                    </div>
+                </div>
+
+                <div class="distro-card">
+                    <div class="distro-header">
+                        <h3 class="distro-name">Fedora</h3>
+                        <span class="distro-tag">企业级</span>
+                    </div>
+                    <div class="distro-body">
+                        <p class="distro-description">前沿技术，适合开发者和企业环境</p>
+                        <ul class="distro-features">
+                            <li>最新软件包</li>
+                            <li>企业级安全</li>
+                            <li>容器原生支持</li>
+                        </ul>
+                        <button class="btn btn-outline distro-btn">下载 Fedora</button>
+                    </div>
+                </div>
+
+                <div class="distro-card">
+                    <div class="distro-header">
+                        <h3 class="distro-name">Debian</h3>
+                        <span class="distro-tag">稳定</span>
+                    </div>
+                    <div class="distro-body">
+                        <p class="distro-description">极其稳定，适合服务器和生产环境</p>
+                        <ul class="distro-features">
+                            <li>卓越的稳定性</li>
+                            <li>丰富的包管理</li>
+                            <li>多架构支持</li>
+                        </ul>
+                        <button class="btn btn-outline distro-btn">下载 Debian</button>
+                    </div>
+                </div>
+
+                <div class="distro-card">
+                    <div class="distro-header">
+                        <h3 class="distro-name">Arch Linux</h3>
+                        <span class="distro-tag">滚动更新</span>
+                    </div>
+                    <div class="distro-body">
+                        <p class="distro-description">简洁、高度可定制的滚动更新发行版</p>
+                        <ul class="distro-features">
+                            <li>滚动更新模式</li>
+                            <li>简洁的基础系统</li>
+                            <li>完整的用户控制</li>
+                        </ul>
+                        <button class="btn btn-outline distro-btn">下载 Arch</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="90">0</div>
+                    <div class="stat-label">% 超级计算机</div>
+                    <div class="stat-desc">全球前500强超级计算机使用Linux</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="75">0</div>
+                    <div class="stat-label">% 云服务器</div>
+                    <div class="stat-desc">云基础设施首选操作系统</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="70">0</div>
+                    <div class="stat-label">% 智能手机</div>
+                    <div class="stat-desc">Android基于Linux内核</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="30">0</div>
+                    <div class="stat-label">年+</div>
+                    <div class="stat-desc">持续发展的开源项目</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="documentation" class="documentation">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">文档</span>
+                </div>
+                <h2 class="section-title">学习资源</h2>
+                <p class="section-subtitle">从入门到精通的完整学习路径</p>
+            </div>
+
+            <div class="docs-grid">
+                <div class="doc-category">
+                    <h3 class="doc-category-title">📚 入门指南</h3>
+                    <ul class="doc-list">
+                        <li><a href="#" class="doc-link">Linux基础概念</a></li>
+                        <li><a href="#" class="doc-link">安装配置教程</a></li>
+                        <li><a href="#" class="doc-link">常用命令参考</a></li>
+                        <li><a href="#" class="doc-link">文件系统管理</a></li>
+                    </ul>
+                </div>
+
+                <div class="doc-category">
+                    <h3 class="doc-category-title">🛠️ 系统管理</h3>
+                    <ul class="doc-list">
+                        <li><a href="#" class="doc-link">用户权限管理</a></li>
+                        <li><a href="#" class="doc-link">网络配置</a></li>
+                        <li><a href="#" class="doc-link">软件包管理</a></li>
+                        <li><a href="#" class="doc-link">系统监控</a></li>
+                    </ul>
+                </div>
+
+                <div class="doc-category">
+                    <h3 class="doc-category-title">⚡ 高级主题</h3>
+                    <ul class="doc-list">
+                        <li><a href="#" class="doc-link">内核开发</a></li>
+                        <li><a href="#" class="doc-link">设备驱动开发</a></li>
+                        <li><a href="#" class="doc-link">系统编程</a></li>
+                        <li><a href="#" class="doc-link">性能优化</a></li>
+                    </ul>
+                </div>
+
+                <div class="doc-category">
+                    <h3 class="doc-category-title">🔧 开发工具</h3>
+                    <ul class="doc-list">
+                        <li><a href="#" class="doc-link">GCC编译器</a></li>
+                        <li><a href="#" class="doc-link">GDB调试器</a></li>
+                        <li><a href="#" class="doc-link">Make构建系统</a></li>
+                        <li><a href="#" class="doc-link">Git版本控制</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">社区</span>
+                </div>
+                <h2 class="section-title">加入全球社区</h2>
+                <p class="section-subtitle">与数百万开发者一起成长</p>
+            </div>
+
+            <div class="community-grid">
+                <div class="community-card">
+                    <div class="community-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="community-title">论坛讨论</h3>
+                    <p class="community-description">在官方论坛提问、分享经验、获得帮助</p>
+                    <a href="#" class="community-link">访问论坛 →</a>
+                </div>
+
+                <div class="community-card">
+                    <div class="community-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                        </svg>
+                    </div>
+                    <h3 class="community-title">GitHub</h3>
+                    <p class="community-description">参与开源项目，贡献代码，报告问题</p>
+                    <a href="#" class="community-link">查看项目 →</a>
+                </div>
+
+                <div class="community-card">
+                    <div class="community-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3 class="community-title">IRC聊天</h3>
+                    <p class="community-description">实时聊天，获得即时帮助和交流</p>
+                    <a href="#" class="community-link">加入聊天 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-info">
+                        <span class="brand-logo">🐧</span>
+                        <span class="brand-title">Linux.org</span>
+                    </div>
+                    <p class="brand-description">开源操作系统的官方网站，为全球用户提供Linux相关的资源和支持。</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 class="link-title">资源</h4>
+                        <ul class="link-list">
+                            <li><a href="#">下载</a></li>
+                            <li><a href="#">文档</a></li>
+                            <li><a href="#">教程</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-group">
+                        <h4 class="link-title">社区</h4>
+                        <ul class="link-list">
+                            <li><a href="#">论坛</a></li>
+                            <li><a href="#">邮件列表</a></li>
+                            <li><a href="#">IRC</a></li>
+                            <li><a href="#">活动</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-group">
+                        <h4 class="link-title">关于</h4>
+                        <ul class="link-list">
+                            <li><a href="#">关于我们</a></li>
+                            <li><a href="#">联系我们</a></li>
+                            <li><a href="#">隐私政策</a></li>
+                            <li><a href="#">使用条款</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Linux.org. 本站内容基于CC BY-SA 4.0许可。</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINUX_KERNEL_v5.15.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CRT Overlay Effect -->
+    <div class="crt-overlay"></div>
+    <noscript>
+        <div class="noscript-warning">JavaScript is required for the complete terminal simulation. Core content remains available.</div>
+    </noscript>
+
+    <!-- Main Terminal Container -->
+    <div id="terminal">
+        <!-- Terminal Header -->
+        <header class="terminal-header">
+            <div class="terminal-titlebar">
+                <span>+----- KERNEL SYSTEM CONSOLE -----+</span>
+            </div>
+            <div class="system-info">
+                <p>SYSTEM BOOT: <span class="status-ok">[OK]</span> <span class="blinking-cursor">_</span></p>
+                <p>LAST LOGIN: FRI DEC  5 11:03:42 UTC 2025</p>
+                <p>KERNEL VERSION: 5.15.0-76-generic #83-Ubuntu SMP PREEMPT_DYNAMIC</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="terminal-body">
+            <!-- Hero Section with ASCII Art -->
+            <section id="hero">
+                <pre class="ascii-logo">
+ _____ _     _     _   _   _      _   _
+|_   _| |__ (_) __| | | \ | | | ___| |_| |_
+  | | | '_ \| |/ _` | |  \| |/ _ \ __| __|
+  | | | | | | | (_| | | |\  |  __/ |_| |_
+  |_| |_| |_|_|\__,_| |_| \_|\___|\__|\__|
+                </pre>
+
+                <h1 class="typewriter" aria-live="polite" data-text="WELCOME TO THE LINUX KERNEL">
+                    WELCOME TO THE LINUX KERNEL
+                </h1>
+                <div class="hero-description">
+                    <p class="prompt-line">$ <span class="command">echo "The power of open-source computing"</span></p>
+                    <p class="output">&gt; FREEDOM • STABILITY • SECURITY • PERFORMANCE</p>
+                </div>
+            </section>
+
+            <!-- Navigation as Shell Commands -->
+            <nav id="navigation" aria-label="Primary">
+                <p class="prompt-line">$ <span class="command">ls -la /usr/linux/</span></p>
+                <div class="nav-grid">
+                    <a href="#features" class="nav-item">
+                        <span class="permission">drwxr-xr-x</span>
+                        <span class="user">root</span>
+                        <span class="group">root</span>
+                        <span class="size">4096</span>
+                        <span class="date">Dec  5 11:03</span>
+                        <span class="name">FEATURES</span>
+                    </a>
+                    <a href="#download" class="nav-item">
+                        <span class="permission">-rwxr-xr-x</span>
+                        <span class="user">root</span>
+                        <span class="group">root</span>
+                        <span class="size">8192</span>
+                        <span class="date">Dec  5 11:03</span>
+                        <span class="name">DOWNLOAD</span>
+                    </a>
+                    <a href="#documentation" class="nav-item">
+                        <span class="permission">drwxr-xr-x</span>
+                        <span class="user">root</span>
+                        <span class="group">root</span>
+                        <span class="size">2048</span>
+                        <span class="date">Dec  5 11:03</span>
+                        <span class="name">DOCUMENTATION</span>
+                    </a>
+                    <a href="#community" class="nav-item">
+                        <span class="permission">lrwxrwxrwx</span>
+                        <span class="user">root</span>
+                        <span class="group">root</span>
+                        <span class="size">32</span>
+                        <span class="date">Dec  5 11:03</span>
+                        <span class="name">COMMUNITY</span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Download Section -->
+            <section id="download">
+                <h2 class="section-title">// SYSTEM INSTALLATION //</h2>
+                <div class="download-terminal">
+                    <p class="prompt-line">$ <span class="command">sudo apt-get install linux-image-generic</span></p>
+                    <div class="terminal-output">
+                        <p>Reading package lists... [OK]</p>
+                        <p>Building dependency tree... [OK]</p>
+                        <p>Reading state information... [OK]</p>
+                        <p>The following NEW packages will be installed:</p>
+                        <p>  linux-image-generic linux-headers-generic</p>
+                        <div class="progress-section">
+                            <p>Download progress: [<span class="progress-bar"><span class="progress-fill"></span></span>] 100%</p>
+                            <p>Installing... <span class="status-ok">[DONE]</span></p>
+                        </div>
+                    </div>
+                    <div class="download-options">
+                        <button class="terminal-button primary" type="button">[ EXECUTE INSTALLATION ]</button>
+                        <button class="terminal-button secondary" type="button" data-repo-url="https://github.com/torvalds/linux">[ VIEW SOURCE CODE ]</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features">
+                <h2 class="section-title">// KERNEL CAPABILITIES //</h2>
+                <div class="features-grid">
+                    <div class="feature-pane">
+                        <div class="pane-header">+-- OPEN SOURCE --+</div>
+                        <div class="pane-content">
+                            <p>LICENSE: GPL v2</p>
+                            <p>STATUS: <span class="status-ok">ACTIVE</span></p>
+                            <p>&gt; 20,000+ contributors</p>
+                            <p>&gt; 30+ million lines of code</p>
+                            <p>&gt; 100% transparent development</p>
+                            <div class="mini-progress">
+                                <p>Community Health:</p>
+                                <div class="progress-bar">[<span class="progress-fill"></span>]</div>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-pane">
+                        <div class="pane-header">+-- STABILITY --+</div>
+                        <div class="pane-content">
+                            <p>UPTIME: <span id="uptime">CALCULATING...</span></p>
+                            <p>CRASH RATE: 0.001%</p>
+                            <p>&gt; Enterprise grade reliability</p>
+                            <p>&gt; 99.999% availability</p>
+                            <p>&gt; Decades of production use</p>
+                            <div class="mini-progress">
+                                <p>Reliability Score:</p>
+                                <div class="progress-bar">[<span class="progress-fill"></span>]</div>
+                                <span>99.9%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-pane">
+                        <div class="pane-header">+-- SECURITY --+</div>
+                        <div class="pane-content">
+                            <p>SECURITY LEVEL: MAXIMUM</p>
+                            <p>PATCH STATUS: <span class="status-ok">CURRENT</span></p>
+                            <p>&gt; SELinux integration</p>
+                            <p>&gt; AppArmor support</p>
+                            <p>&gt; Regular security updates</p>
+                            <div class="mini-progress">
+                                <p>Security Rating:</p>
+                                <div class="progress-bar">[<span class="progress-fill"></span>]</div>
+                                <span>A+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-pane">
+                        <div class="pane-header">+-- PERFORMANCE --+</div>
+                        <div class="pane-content">
+                            <p>CPU SCHEDULER: CFS</p>
+                            <p>I/O SCHEDULER: BFQ</p>
+                            <p>&gt; Real-time capabilities</p>
+                            <p>&gt; Low latency operations</p>
+                            <p>&gt; High throughput</p>
+                            <div class="mini-progress">
+                                <p>Benchmark Score:</p>
+                                <div class="progress-bar">[<span class="progress-fill"></span>]</div>
+                                <span>98.7%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Documentation Section -->
+            <section id="documentation">
+                <h2 class="section-title">// SYSTEM DOCUMENTATION //</h2>
+                <div class="docs-terminal">
+                    <p class="prompt-line">$ <span class="command">man linux</span></p>
+                    <div class="manual-content">
+                        <div class="manual-page">
+                            <p>LINUX(1)                     General Commands Manual                    LINUX(1)</p>
+                            <p><span class="section-header">NAME</span></p>
+                            <p>       linux - The Linux kernel</p>
+                            <br>
+                            <p><span class="section-header">SYNOPSIS</span></p>
+                            <p>       linux [options]</p>
+                            <br>
+                            <p><span class="section-header">DESCRIPTION</span></p>
+                            <p>       Linux is a Unix-like computer operating system assembled under the</p>
+                            <p>       model of free and open-source software development and distribution.</p>
+                        </div>
+
+                        <div class="docs-links">
+                            <a href="https://kernel.org/doc/html/latest/process/development-process.html" class="doc-link" target="_blank" rel="noopener noreferrer">[README]  Kernel Development Guide</a>
+                            <a href="https://man7.org/linux/man-pages/" class="doc-link" target="_blank" rel="noopener noreferrer">[MAN]     System Administration</a>
+                            <a href="https://kernelnewbies.org/Drivers" class="doc-link" target="_blank" rel="noopener noreferrer">[INFO]    Driver Development</a>
+                            <a href="https://docs.kernel.org/admin-guide/quick-start.html" class="doc-link" target="_blank" rel="noopener noreferrer">[TUTORIAL] Getting Started Guide</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- System Monitor -->
+            <section id="system-monitor">
+                <h2 class="section-title">// SYSTEM MONITOR //</h2>
+                <div class="monitor-grid">
+                    <div class="monitor-pane">
+                        <div class="pane-header">+-- CPU USAGE --+</div>
+                        <div class="monitor-content">
+                            <div class="usage-display">
+                                <span id="cpu-usage" aria-live="polite">12</span>%
+                            </div>
+                            <div class="progress-bar" data-monitor="cpu" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="12">[<span class="progress-fill" style="width: 12%"></span>]</div>
+                        </div>
+                    </div>
+
+                    <div class="monitor-pane">
+                        <div class="pane-header">+-- MEMORY --+</div>
+                        <div class="monitor-content">
+                            <div class="usage-display">
+                                <span id="mem-usage" aria-live="polite">67</span>%
+                            </div>
+                            <div class="progress-bar" data-monitor="mem" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="67">[<span class="progress-fill" style="width: 67%"></span>]</div>
+                        </div>
+                    </div>
+
+                    <div class="monitor-pane">
+                        <div class="pane-header">+-- NETWORK --+</div>
+                        <div class="monitor-content">
+                            <div class="usage-display">
+                                <span id="net-usage" aria-live="polite">45</span>%
+                            </div>
+                            <div class="progress-bar" data-monitor="net" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="45">[<span class="progress-fill" style="width: 45%"></span>]</div>
+                        </div>
+                    </div>
+
+                    <div class="monitor-pane">
+                        <div class="pane-header">+-- DISK I/O --+</div>
+                        <div class="monitor-content">
+                            <div class="usage-display">
+                                <span id="disk-usage" aria-live="polite">23</span>%
+                            </div>
+                            <div class="progress-bar" data-monitor="disk" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="23">[<span class="progress-fill" style="width: 23%"></span>]</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Terminal Footer -->
+        <footer class="terminal-footer">
+            <div class="footer-info">
+                <p>SYSTEM STATUS: <span class="status-ok">[OPERATIONAL]</span></p>
+                <p>SERVER LOAD: <span id="load-avg" aria-live="polite">0.15, 0.12, 0.08</span></p>
+                <p>PROCESSES: <span id="process-count" aria-live="polite">247</span> RUNNING</p>
+                <p>HOST: kernel.linuxfoundation.org | TTY: tty1 | UTC: <span id="current-time" aria-live="polite">11:03:42</span></p>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 LINUX_FOUNDATION | GPL v2 LICENSE | DISTRIBUTED UNDER TERMS OF FREE SOFTWARE</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
