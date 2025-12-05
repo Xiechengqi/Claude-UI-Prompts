@@ -1,0 +1,216 @@
+/* Google Fonts are now loaded via next/font for better performance */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === GLOBAL RESET & DESIGN SYSTEM === */
+@layer base {
+  * {
+    border-radius: 0 !important;
+  }
+
+  :root {
+    --background: 255 255 255;
+    --foreground: 0 0 0;
+    --muted: 245 245 245;
+    --muted-foreground: 82 82 82;
+    --accent: 0 0 0;
+    --accent-foreground: 255 255 255;
+    --border: 0 0 0;
+    --border-light: 229 229 229;
+    --card: 255 255 255;
+    --card-foreground: 0 0 0;
+    --ring: 0 0 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    font-family: 'Source Serif 4', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* === TEXTURE PATTERNS (CRITICAL) === */
+  .texture-lines {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, 0.015) 1px,
+      rgba(0, 0, 0, 0.015) 2px
+    );
+    background-size: 100% 4px;
+  }
+
+  .texture-grid {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .texture-diagonal {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(0, 0, 0, 0.08) 40px,
+      rgba(0, 0, 0, 0.08) 42px
+    );
+  }
+
+  .texture-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.02;
+  }
+
+  /* === INverted TEXTURES === */
+  .inverted-lines {
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.03) 1px,
+      rgba(255, 255, 255, 0.03) 2px
+    );
+    background-size: 4px 100%;
+  }
+
+  .inverted-radial {
+    background-image: radial-gradient(
+      circle at top center,
+      rgba(255, 255, 255, 0.05),
+      transparent 70%
+    );
+  }
+
+  /* === FOCUS STATES (Accessibility Required) === */
+  .focus-ring {
+    @apply focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-black;
+  }
+
+  .focus-ring-inverted {
+    @apply focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-white;
+  }
+
+  /* === Typography Scale === */
+  .display-heading {
+    @apply font-display font-black leading-[0.85] tracking-tight;
+  }
+
+  .heading-serif {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  .body-serif {
+    @apply font-body leading-relaxed;
+  }
+
+  .mono-label {
+    @apply font-mono text-xs uppercase tracking-widest;
+  }
+
+  /* === Border System === */
+  .border-hairline {
+    border-width: 1px;
+  }
+
+  .border-thin {
+    border-width: 1px;
+  }
+
+  .border-medium {
+    border-width: 2px;
+  }
+
+  .border-thick {
+    border-width: 4px;
+  }
+
+  .border-ultra {
+    border-width: 8px;
+  }
+}
+
+@layer components {
+  /* === BUTTON COMPONENTS === */
+  .btn-primary {
+    @apply bg-black text-white px-8 py-4 font-mono text-sm uppercase tracking-widest font-medium border-none transition-all duration-100 hover:bg-white hover:text-black focus-ring;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-black border-2 border-black px-8 py-4 font-mono text-sm uppercase tracking-widest font-medium transition-all duration-100 hover:bg-black hover:text-white focus-ring;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-black px-6 py-3 font-mono text-sm uppercase tracking-widest font-medium transition-all duration-100 hover:underline focus-ring;
+  }
+
+  /* === CARD COMPONENTS === */
+  .card-standard {
+    @apply bg-white border-2 border-black p-6 md:p-8;
+  }
+
+  .card-inverted {
+    @apply bg-black text-white border-2 border-black p-6 md:p-8;
+  }
+
+  .card-borderless {
+    @apply bg-transparent border-none p-6 md:p-8;
+  }
+
+  /* === SECTION DIVIDERS === */
+  .section-divider {
+    @apply flex items-center gap-6 py-20 md:py-24 lg:py-32;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    @apply flex-1 h-1 bg-black;
+  }
+
+  /* === HOVER INVERSION EFFECT === */
+  .hover-inversion {
+    @apply transition-all duration-100 hover:bg-black hover:text-white;
+  }
+
+  /* === IMAGE BORDER EFFECTS === */
+  .image-border-hover {
+    @apply border-2 transition-all duration-100 group-hover:border-4 group-hover:scale-105;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* === Custom scrollbar === */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--foreground));
+  border: 3px solid rgb(var(--muted));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--muted-foreground));
+}

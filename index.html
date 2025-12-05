@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude UI Prompts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .folder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .folder-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .folder-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .folder-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+        }
+
+        .folder-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .folder-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .folder-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .folder-description {
+            color: #718096;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .folder-link {
+            color: #667eea;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            text-decoration: none;
+        }
+
+        .folder-link:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .folder-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .folder-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Claude UI Prompts</h1>
+            <p class="subtitle">精选的 UI 提示词集合，快速访问 GitHub Pages 预览</p>
+        </header>
+
+        <main>
+            <div class="folder-grid">
+                <a href="https://xiechengqi.github.io/Claude-UI-Prompts/Monochrome/" class="folder-card">
+                    <div class="folder-icon">📁</div>
+                    <h2 class="folder-name">Monochrome</h2>
+                    <p class="folder-description">Linux Website - Minimalist Monochrome Design</p>
+                    <span class="folder-link">访问预览 →</span>
+                </a>
+                <a href="https://xiechengqi.github.io/Claude-UI-Prompts/SaaS/" class="folder-card">
+                    <div class="folder-icon">📁</div>
+                    <h2 class="folder-name">SaaS</h2>
+                    <p class="folder-description">```</p>
+                    <span class="folder-link">访问预览 →</span>
+                </a>
+                <a href="https://xiechengqi.github.io/Claude-UI-Prompts/Terminal/" class="folder-card">
+                    <div class="folder-icon">📁</div>
+                    <h2 class="folder-name">Terminal</h2>
+                    <p class="folder-description">点击查看 Terminal 的详细信息</p>
+                    <span class="folder-link">访问预览 →</span>
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <p>由 Claude 自动生成 • 基于 GitHub Pages 托管</p>
+        </footer>
+    </div>
+</body>
+</html>
